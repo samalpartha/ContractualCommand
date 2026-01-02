@@ -1,0 +1,50 @@
+{
+  "name": "counterfactual-command-center",
+  "version": "1.0.0",
+  "description": "Decision accountability analytics platform for customer retention",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --coverage",
+    "db:setup": "node data/migrations/setup.js",
+    "data:seed": "node data/seed.js",
+    "model:train": "python3 python/train_model.py",
+    "model:predict": "python3 python/predict.py",
+    "lint": "eslint src/",
+    "format": "prettier --write \"src/**/*.js\""
+  },
+  "keywords": [
+    "churn",
+    "analytics",
+    "counterfactual",
+    "retention",
+    "machine-learning"
+  ],
+  "author": "Counterfactual Analytics Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "axios": "^1.6.2",
+    "joi": "^17.11.0",
+    "winston": "^3.11.0",
+    "swagger-ui-express": "^5.0.0",
+    "swagger-jsdoc": "^6.2.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
